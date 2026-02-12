@@ -547,3 +547,84 @@ nav {
   padding-left: 23px;
   background: #0a0a0a;
 }
+
+/* --- Mobile Responsiveness --- */
+
+@media (max-width: 900px) {
+  /* 1. Adjust Navigation */
+  nav {
+    padding: 5px 3%;
+  }
+
+  .logo {
+    width: 120px;
+    margin-right: 10px;
+  }
+
+  .nav-left ul li img {
+    width: 22px;
+    margin: 0 8px;
+  }
+
+  .search-box {
+    display: none; /* Hide search bar on tablets/phones to save space */
+  }
+
+  /* 2. Stack Layout Vertically */
+  .container {
+    flex-wrap: wrap;
+    padding: 10px 3%;
+  }
+
+  /* 3. Hide Sidebars */
+  .left-sidebar, .right-sidebar {
+    display: none; 
+  }
+
+  /* 4. Make Main Feed Full Width */
+  .main-content {
+    flex-basis: 100%;
+  }
+
+  /* 5. Make Stories Scrollable Horizontally */
+  .story-gallery {
+    overflow-x: auto;
+    gap: 10px;
+  }
+
+  .story {
+    flex-basis: 25%; /* Show roughly 3-4 stories at a time */
+    min-width: 80px;
+    padding-top: 35%;
+  }
+
+  /* 6. Adjust Post Input */
+  .post-input-container {
+    padding-left: 0;
+  }
+
+  .add-post-link {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .add-post-link a {
+    margin-right: 10px;
+    font-size: 11px;
+  }
+}
+
+/* --- Extra Small Devices (Phones) --- */
+@media (max-width: 500px) {
+  .nav-left ul {
+    display: none; /* Hide notification/inbox icons on very small screens */
+  }
+
+  .story {
+    flex-basis: 30%;
+  }
+
+  .post-text {
+    font-size: 14px;
+  }
+}
