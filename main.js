@@ -4,7 +4,8 @@ const darkBtn = document.getElementById("dark-btn");
 function settingsMenuToggle() {
   settingsMenu.classList.toggle("setting-menu-height");
 }
-
+ 
+// Toggle Menu 
 darkBtn.onclick = function () {
   darkBtn.classList.toggle("dark-btn-on");
   document.body.classList.toggle("dark-theme");
@@ -18,6 +19,7 @@ darkBtn.onclick = function () {
   }
 };
 
+// Toggle storage
 if (localStorage.getItem("theme") == "light") {
   darkBtn.classList.remove("dark-btn-on");
   document.body.classList.remove("dark-theme");
